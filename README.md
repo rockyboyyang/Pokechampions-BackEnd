@@ -3,7 +3,7 @@ An application that allows you to take on the Kanto League in the beautiful worl
 Gym Leaders, Elite Four, and the Pokemon Champion.
 
 # Live Link
-<a href="https://swipefair.herokuapp.com/login">LIVE LINK HERE</a>
+Unavailable
 
 # Repo to FrontEnd
 <a href="https://github.com/rockyboyyang/swipefair-frontend">LINK TO BACKEND</a>
@@ -20,25 +20,14 @@ Gym Leaders, Elite Four, and the Pokemon Champion.
     - Flask
     - SQLALchemy
     - SQL
-    - PSQL
     - Postgres
 
 
  # Features
- - Users/Authentication
- - Splash page/Login/Sign-Up
- - Jobseeker account creation
- - Employer account creation
- - Ability to swipe job openings
+- TBD
 
 # Technical Challenges
-- Getting the backend and frontend to connect
-- Utilizing a swipe event
+- TBD
 
 # Future Implementations
-- Search bar
-- Company pages to work
-- Web Sockets
-- Testing
-- Channels for specific careers
-- Able to delete chats and messages
+- TBD
