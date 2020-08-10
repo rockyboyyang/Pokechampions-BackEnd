@@ -6,7 +6,7 @@ Gym Leaders, Elite Four, and the Pokemon Champion.
 Unavailable
 
 # Repo to FrontEnd
-<a href="https://github.com/rockyboyyang/swipefair-frontend">LINK TO BACKEND</a>
+<a href="https://github.com/rockyboyyang/PokeBattle-FrontEnd">LINK TO BACKEND</a>
 
 # Technologies
 - Front-end development
