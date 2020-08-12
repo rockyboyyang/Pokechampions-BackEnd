@@ -25,3 +25,34 @@ def login():
         return {'access_token': access_token.decode('UTF-8'), 'user': user.as_dict()}
     else:
         return {"error": "Incorrect password"}, 401
+
+
+@bp.route('/signup', methods=["POST"])  # create new account
+# @cross_origin()
+def signup():
+    data = request.json
+    print(f"\n\n\nDATA\n{data}\n\n\n")
+    user = User(
+        password=data['password'], 
+        username=data['username'], 
+        rank='Novice',
+        boulderbadge=False,
+        cascadebadge=False,
+        thunderbadge=False,
+        rainbowbadge=False,
+        soulbadge=False,
+        marshbadge=False,
+        volcanobadge=False,
+        earthbadge=False,
+        beatElite4_1=False,
+        beatElite4_2=False,
+        beatElite4_3=False,
+        beatElite4_4=False,
+        beatChampion=False,
+    )
+    db.session.add(user)
+    db.session.commit()
+
+    access_token = jwt.encode(
+        {'username': user.username}, Configuration.SECRET_KEY)
+    return {'access_token': access_token.decode('UTF-8'), 'user': user.as_dict()}
