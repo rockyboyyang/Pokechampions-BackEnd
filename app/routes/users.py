@@ -56,3 +56,47 @@ def signup():
     access_token = jwt.encode(
         {'username': user.username}, Configuration.SECRET_KEY)
     return {'access_token': access_token.decode('UTF-8'), 'user': user.as_dict()}
+
+
+@bp.route('<int:userId>/edit_pokemon_slot/<string:pokemonSlot>', methods=['PUT'])
+def edit_pokemon_user_info(userId, pokemonSlot):
+    data = request.json
+    user = User.query.filter_by(id=userId).first()
+
+    finStr = str(data).replace("'", '"')
+    finStr = finStr.replace("None", "null")
+    if 'target"s' in finStr:
+        finStr = finStr.replace('target"s', "target's")
+    if 'can"t' in finStr:
+        finStr = finStr.replace('can"t', "can't")
+    if 'hasn"t' in finStr:
+        finStr = finStr.replace('hasn"t', "hasn't")
+    if 'don"t' in finStr:
+        finStr = finStr.replace('don"t', "don't")
+    if 'couldn"t' in finStr:
+        finStr = finStr.replace('couldn"t', "couldn't")
+    if 'won"t' in finStr:
+        finStr = finStr.replace('won"t', "won't")
+    if 'ner"s' in finStr:
+        finStr = finStr.replace('ner"s', "ner's")
+    if 'ser"s' in finStr:
+        finStr = finStr.replace('ser"s', "ser's")
+
+
+    if pokemonSlot == 'slot_1':
+        user.slot_1 = finStr
+    if pokemonSlot == 'slot_2':
+        user.slot_2 = finStr
+    if pokemonSlot == 'slot_3':
+        user.slot_3 = finStr
+    if pokemonSlot == 'slot_4':
+        user.slot_4 = finStr
+    if pokemonSlot == 'slot_5':
+        user.slot_5 = finStr
+    if pokemonSlot == 'slot_6':
+        user.slot_6 = finStr
+
+
+    db.session.commit()
+
+    return { 'user': user.as_dict()}
