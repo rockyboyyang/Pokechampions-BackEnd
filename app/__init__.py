@@ -4,7 +4,7 @@ from flask_cors import CORS, cross_origin
 
 from app.config import Configuration
 from app.routes import users
-from app.models import db
+from app.models import db, User, Trainer
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)  # this allows us to request info in the backend from the frontend server
