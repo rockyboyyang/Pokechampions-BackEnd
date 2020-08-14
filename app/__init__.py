@@ -3,7 +3,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS, cross_origin
 
 from app.config import Configuration
-from app.routes import users
+from app.routes import users, trainers
 from app.models import db, User, Trainer
 
 app = Flask(__name__)
@@ -27,5 +27,5 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 app.register_blueprint(users.bp)
-# app.register_blueprint(trainers.bp)
+app.register_blueprint(trainers.bp)
 
