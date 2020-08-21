@@ -78,5 +78,7 @@ class Trainer(MixinAsDict, db.Model):
     slot_6 = db.Column(db.String(), nullable=False)
     trainerClass = db.Column(db.String(30), nullable=False)
     bio = db.Column(db.Text, nullable=False)
+    pre_battle_quote = db.Column(db.Text, nullable=False)
+    post_battle_quote = db.Column(db.Text, nullable=False)
 
         
