@@ -86,9 +86,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Gym Leader",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Also known as the Nature-Loving Princess.  Erika is ladylike, and a teacher of flower-arrangment.  Erika only collects Pokémon if she considers them attractive, though her definition of attractive seems to include varieties only a botanist could love.',
+        pre_battle_quote="Hello... Lovely weather, isn't it? It's so pleasant. ...Oh dear... I must have dozed off. Welcome. My name is Erika. I am the Leader of Celadon Gym. I am a student of the art of flower arranging. My Pokémon are solely of the Grass type. ...Oh, I'm sorry, I had no idea that you wished to challenge me. Very well, but I shall not lose.",
+        post_battle_quote="Oh! I concede defeat. You are remarkably strong. I must confer on you the RainbowBadge.",
     )
 
     koga = Trainer(
@@ -100,9 +100,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Gym Leader",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Also known as the Poisonous Ninja Master. Koga is user of the Poison-type. He likes the despair and horror that Poison-type Pokémon can inflict on others',
+        pre_battle_quote="Fwahahaha! A mere child like you dares to challenge me? The very idea makes me shiver with mirth! Very well, I shall show you true terror as a ninja master! Poison brings steady doom. Sleep renders foes helpless. Despair to the creeping horror of Poison-type Pokémon!",
+        post_battle_quote="Humph! You have proven your worth! Here! Take the SoulBadge!",
     )
 
     sabrina = Trainer(
@@ -114,9 +114,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Gym Leader",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Also known as the Master of Psychic Pokemon. She has had psychic powers ever since she was a child, when she accidentally bent a spoon. She apparently dislikes battling, but is hard to beat because she can communicate with her Pokémon telepathically',
+        pre_battle_quote="I had a vision of your arrival! I have had psychic powers since I was a child. It started when a spoon I carelessly tossed, bent. I dislike battling, but if you wish, I will show you my powers!",
+        post_battle_quote="This loss shocks me! But a loss is a loss. I admit I didn't work hard enough to win. You earned the MarshBadge.",
     )
 
     blaine = Trainer(
@@ -128,9 +128,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Gym Leader",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Also known as the Hotheaded Quiz Master.  His strategy is to incinerate challengers with his rough-and-ready Fire-type Pokémon. To reach Blaine, challengers have to answer a series of quiz questions about Pokémon. Blaine only takes off his sunglasses when thinking up new quiz questions',
+        pre_battle_quote='Hah! I am Blaine, the red-hot Leader of Cinnabar Gym! My fiery Pokémon are all ready with intense heat! They incinerate all challengers! Hah! You better have a Burn Heal!',
+        post_battle_quote='I have burned down to nothing! Not even ashes remain! You have earned the VolcanoBadge.',
     )
 
     giovanni = Trainer(
@@ -142,9 +142,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Gym Leader",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Also known as Team Rocket Boss, As a Gym Leader, he specialized in Ground-type Pokémon, but his master plan includes collecting rare Pokémon of all types',
+        pre_battle_quote="Fwahahaha! Welcome to my hideout! It shall be so until I can restore Team Rocket to its former glory. I won't be holding back! You shall face Giovanni, the greatest Trainer!",
+        post_battle_quote="Ha! That was a truly intense fight. You have won! As proof, here is the EarthBadge!",
     )
 
     lorelei = Trainer(
@@ -156,9 +156,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Elite Four",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='She is known for her logical, calculated, and cool style of battling. Her Lapras has been with her ever since she was a child.',
+        pre_battle_quote="Welcome to Pokémon League! I am Lorelei of the Elite Four!  No one can best me when it comes to icy Pokémon. Freezing moves are powerful. Your Pokémon will be at my mercy when they are frozen solid! Hahaha! Are you ready?",
+        post_battle_quote="Things shouldn't be this way!....You're better than I thought. Go on ahead. You only got a taste of the Pokémon League's power.",
     )
 
     bruno = Trainer(
@@ -170,9 +170,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Elite Four",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio="He raises Fighting-type Pokémon, living with them and training with them. He joined the Elite Four out of a desire to challenge the best Trainers. His strongest Pokémon is always his signature Pokémon Machamp.",
+        pre_battle_quote="I am Bruno of the Elite Four! Through rigorous training, people and Pokémon can become stronger without limit. I've lived and trained with my fighting Pokémon! And that will never change! We will grind you down with our superior power! Hoo hah!",
+        post_battle_quote='Having lost, I have no right to say anything… Go face your next challenge!',
     )
 
     agatha = Trainer(
@@ -184,9 +184,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Elite Four",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Agatha uses Ghost-type Pokémon, and other Pokémon with horrifying appearances. She has a very short temper',
+        pre_battle_quote="I am Agatha of the Elite Four. I hear Oak's taken a lot of interest in you, child. You're the child that Oak's taken under his wing, aren't you? That old duff was once tough and handsome. But that was decades ago. He's a shadow of his former self. Now he just wants to fiddle with his Pokédex. He's wrong. Pokémon are for battling! I'll show you how a real Trainer battles!",
+        post_battle_quote='You win! I see what the old duff sees in you now. I have nothing else to say. Run along now, child!',
     )
 
     lance = Trainer(
@@ -198,9 +198,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Elite Four",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='Lance is the fourth and final member of the Elite Four.  He raises Dragon-Type Pokemon, which are both hard to catch and raise. He prefers the superiority of Dragon-type Pokémon, believing them to be virtually indestructible.',
+        pre_battle_quote="Ah! I've heard about you! I lead the Elite Four. You can call me Lance the Dragon Trainer. You know that dragons are mythical Pokémon. They’re hard to catch and raise, but their powers are superior. They’re virtually indestructible. There's no being clever with them. Well, are you ready to lose? Your League challenge ends with me!",
+        post_battle_quote='I still can’t believe my dragons lost to you. You are now the Pokémon League Champion! …Or, you would have been, but you have one more challenge left. There is one more Trainer to face! His name is… ROCKY! He beat the Elite Four before you. He is the real Pokémon League Champion.',
     )
 
     rocky = Trainer(
@@ -212,9 +212,9 @@ with app.app_context():
         slot_5='',
         slot_6='',
         trainerClass="Pokemon Champion",
-        bio='',
-        pre_battle_quote='',
-        post_battle_quote='',
+        bio='A man who travelled from a different universe and took on the Pokemon Challenge.  He conquered the Gym Leaders and Elite Four like it was nothing.  He is the Pokemon Champion and will likely be the champion for a long time until he finds his way back to his universe.',
+        pre_battle_quote='Hello there...my name is Rocky.  I was working late one night on a project...then a wormhole appeared and sucked me.  Next thing I know, I woke up in Pallet Town and met Professor Oak.  Long story short, I conquered every obstacle I faced and became the ultimate champion.  Now, challenger, come face me!',
+        post_battle_quote='Congratulations...you are the first person ever to have defeat me.  You are now the new and undisputed Pokemon Champion!',
     )
 
     db.session.add(demouser)
