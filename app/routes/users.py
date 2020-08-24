@@ -31,6 +31,9 @@ def login():
 # @cross_origin()
 def signup():
     data = request.json
+    user = User.query.filter(User.username == data['username']).first()
+    if user:
+        return {"error": "Username already exists!"}
     print(f"\n\n\nDATA\n{data}\n\n\n")
     user = User(
         password=data['password'], 
