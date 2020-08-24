@@ -29,6 +29,8 @@ def fetchTrainerInfo(trainerName):
         'slot_5': trainer['slot_5'],
         'slot_6': trainer['slot_6'],
         'trainerClass': trainer['trainerClass'],
+        'pre_battle_quote': trainer['pre_battle_quote'],
+        'post_battle_quote': trainer['post_battle_quote'],
     }
     return { 'opponentData': data }
 
