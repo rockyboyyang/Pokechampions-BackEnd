@@ -109,3 +109,38 @@ def edit_pokemon_user_info(userId, pokemonSlot):
     db.session.commit()
 
     return { 'user': user.as_dict()}
+
+
+@bp.route('<int:userId>/badges', methods=['PUT'])
+def edit_pokemon_user_badge(userId):
+    data = request.json
+    user = User.query.filter_by(id=userId).first()
+    if data == 'brock':
+        user.boulderbadge = True
+    if data == 'misty':
+        user.cascadebadge = True
+    if data == 'ltsurge':
+        user.thunderbadge = True
+    if data == 'erika':
+        user.rainbowbadge = True
+    if data == 'koga':
+        user.soulbadge = True
+    if data == 'sabrina':
+        user.marshbadge = True
+    if data == 'blaine':
+        user.volcanobadge = True
+    if data == 'giovanni':
+        user.earthbadge = True
+    if data == 'lorelei':
+        user.beatElite4_1 = True
+    if data == 'bruno':
+        user.beatElite4_2 = True
+    if data == 'agatha':
+        user.beatElite4_3 = True
+    if data == 'lance':
+        user.beatElite4_4 = True
+
+
+    db.session.commit()
+
+    return { 'user': user.as_dict()}
