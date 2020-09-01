@@ -10,7 +10,7 @@ from flask import Response
 
 from ..config import Configuration
 
-bp = Blueprint("gymleaders", __name__, url_prefix='/api/gymleaders')
+bp = Blueprint("gymleaders", __name__, url_prefix='/api/trainers')
 
 
 @bp.route('/<string:trainerName>')
@@ -18,7 +18,6 @@ def fetchTrainerInfo(trainerName):
     
     # handle locked trainers
     trainer = Trainer.query.filter(trainerName == Trainer.name).one().as_dict()
-    print(trainer['name'])
     data = {
         'name': trainer['name'],
         'bio': trainer['bio'],
