@@ -17,7 +17,7 @@ with app.app_context():
     db.drop_all()
     db.create_all()
         
-    demouser = User(username='satoshi', 
+    demouser = User(username='demouser', 
                     hashed_password=generate_password_hash('password'), 
                     rank='Novice',
                     boulderbadge=False,
@@ -33,6 +33,60 @@ with app.app_context():
                     beatElite4_3=False,
                     beatElite4_4=False,
                     beatChampion=False,
+                    )
+
+    demouserallgymleader = User(username='demouserallgymleader', 
+                    hashed_password=generate_password_hash('password'), 
+                    rank='Novice',
+                    boulderbadge=True,
+                    cascadebadge=True,
+                    thunderbadge=True,
+                    rainbowbadge=True,
+                    soulbadge=True,
+                    marshbadge=True,
+                    volcanobadge=True,
+                    earthbadge=True,
+                    beatElite4_1=False,
+                    beatElite4_2=False,
+                    beatElite4_3=False,
+                    beatElite4_4=False,
+                    beatChampion=False,
+                    )
+    
+    demouserallelitefour = User(username='demouserallelitefour', 
+                    hashed_password=generate_password_hash('password'), 
+                    rank='Novice',
+                    boulderbadge=True,
+                    cascadebadge=True,
+                    thunderbadge=True,
+                    rainbowbadge=True,
+                    soulbadge=True,
+                    marshbadge=True,
+                    volcanobadge=True,
+                    earthbadge=True,
+                    beatElite4_1=True,
+                    beatElite4_2=True,
+                    beatElite4_3=True,
+                    beatElite4_4=True,
+                    beatChampion=False,
+                    )
+    
+    demouserchampion = User(username='demouserchampion', 
+                    hashed_password=generate_password_hash('password'), 
+                    rank='Novice',
+                    boulderbadge=False,
+                    cascadebadge=False,
+                    thunderbadge=False,
+                    rainbowbadge=False,
+                    soulbadge=False,
+                    marshbadge=False,
+                    volcanobadge=False,
+                    earthbadge=False,
+                    beatElite4_1=True,
+                    beatElite4_2=True,
+                    beatElite4_3=True,
+                    beatElite4_4=True,
+                    beatChampion=True,
                     )
     
     brock = Trainer(
@@ -205,19 +259,23 @@ with app.app_context():
 
     rocky = Trainer(
         name='rocky',
-        slot_1='',
-        slot_2='',
-        slot_3='',
-        slot_4='',
-        slot_5='',
-        slot_6='',
+        slot_1='{"pokemon": "garchomp", "pokemonType": [{"slot": 1, "type": {"name": "dragon", "url": "https://pokeapi.co/api/v2/type/16/"}}, {"slot": 2, "type": {"name": "ground", "url": "https://pokeapi.co/api/v2/type/5/"}}], "pokemonStats": [{"base_stat": 108, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 130, "effort": 3, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 95, "effort": 0, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 80, "effort": 0, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 85, "effort": 0, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 102, "effort": 0, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "iron-head", "power": 80, "pp": 15, "accuracy": 100, "damage_class": "physical", "type": "steel", "typeURL": "https://pokeapi.co/api/v2/type/9/", "stat_changes": [], "priority": 0, "effect_chance": 30, "effect": "Inflicts regular damage.  Has a 30% chance to make the target flinch."}, "moveSlot_2": {"name": "dragon-rush", "power": 100, "pp": 10, "accuracy": 75, "damage_class": "physical", "type": "dragon", "typeURL": "https://pokeapi.co/api/v2/type/16/", "stat_changes": [], "priority": 0, "effect_chance": 20, "effect": "Inflicts regular damage.  Has a 20% chance to make the target flinch."}, "moveSlot_3": {"name": "earthquake", "power": 100, "pp": 10, "accuracy": 100, "damage_class": "physical", "type": "ground", "typeURL": "https://pokeapi.co/api/v2/type/5/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.\n\nIf the target is in the first turn of dig, this move will hit with double powernull."}, "moveSlot_4": {"name": "stone-edge", "power": 100, "pp": 5, "accuracy": 80, "damage_class": "physical", "type": "rock", "typeURL": "https://pokeapi.co/api/v2/type/6/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  User\'s critical hit rate is one level higher when using this movenull."}}',
+        slot_2='{"pokemon": "raichu-alola", "pokemonType": [{"slot": 1, "type": {"name": "electric", "url": "https://pokeapi.co/api/v2/type/13/"}}, {"slot": 2, "type": {"name": "psychic", "url": "https://pokeapi.co/api/v2/type/14/"}}], "pokemonStats": [{"base_stat": 60, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 85, "effort": 0, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 50, "effort": 0, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 95, "effort": 0, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 85, "effort": 0, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 110, "effort": 3, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "focus-blast", "power": 120, "pp": 5, "accuracy": 70, "damage_class": "special", "type": "fighting", "typeURL": "https://pokeapi.co/api/v2/type/2/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  Has a 10% chance to lower the target\'s Special Defense by one stage."}, "moveSlot_2": {"name": "thunder", "power": 110, "pp": 10, "accuracy": 70, "damage_class": "special", "type": "electric", "typeURL": "https://pokeapi.co/api/v2/type/13/", "stat_changes": [], "priority": 0, "effect_chance": 30, "effect": "Inflicts regular damage.  Has a 30% chance to paralyze the target.\n\nDuring rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.\n\nDuring sunny day, this move has 50% accuracy."}, "moveSlot_3": {"name": "hyper-beam", "power": 150, "pp": 5, "accuracy": 90, "damage_class": "special", "type": "normal", "typeURL": "https://pokeapi.co/api/v2/type/1/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  User loses its next turn to recharge, and cannot attack or switch out during that turnnull."}, "moveSlot_4": {"name": "psychic", "power": 90, "pp": 10, "accuracy": 100, "damage_class": "special", "type": "psychic", "typeURL": "https://pokeapi.co/api/v2/type/14/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  Has a 10% chance to lower the target\'s Special Defense by one stage."}}',
+        slot_3='{"pokemon": "blaziken", "pokemonType": [{"slot": 1, "type": {"name": "fire", "url": "https://pokeapi.co/api/v2/type/10/"}}, {"slot": 2, "type": {"name": "fighting", "url": "https://pokeapi.co/api/v2/type/2/"}}], "pokemonStats": [{"base_stat": 80, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 120, "effort": 3, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 70, "effort": 0, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 110, "effort": 0, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 70, "effort": 0, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 80, "effort": 0, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "sky-uppercut", "power": 85, "pp": 15, "accuracy": 90, "damage_class": "physical", "type": "fighting", "typeURL": "https://pokeapi.co/api/v2/type/2/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.\n\nThis move can hit Pokémon under the effect of bounce, fly, or sky dropnull."}, "moveSlot_2": {"name": "brave-bird", "power": 120, "pp": 15, "accuracy": 100, "damage_class": "physical", "type": "flying", "typeURL": "https://pokeapi.co/api/v2/type/3/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  User takes 1/3 the damage it inflicts in recoilnull."}, "moveSlot_3": {"name": "poison-jab", "power": 80, "pp": 20, "accuracy": 100, "damage_class": "physical", "type": "poison", "typeURL": "https://pokeapi.co/api/v2/type/4/", "stat_changes": [], "priority": 0, "effect_chance": 30, "effect": "Inflicts regular damage.  Has a 30% chance to poison the target."}, "moveSlot_4": {"name": "flare-blitz", "power": 120, "pp": 15, "accuracy": 100, "damage_class": "physical", "type": "fire", "typeURL": "https://pokeapi.co/api/v2/type/10/", "stat_changes": [], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  User takes 1/3 the damage it inflicts in recoil.  Has a 10% chance to burn the target.  Frozen Pokémon may use this move, in which case they will thaw."}}',
+        slot_4='{"pokemon": "metagross", "pokemonType": [{"slot": 1, "type": {"name": "steel", "url": "https://pokeapi.co/api/v2/type/9/"}}, {"slot": 2, "type": {"name": "psychic", "url": "https://pokeapi.co/api/v2/type/14/"}}], "pokemonStats": [{"base_stat": 80, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 135, "effort": 0, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 130, "effort": 3, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 95, "effort": 0, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 90, "effort": 0, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 70, "effort": 0, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "meteor-mash", "power": 90, "pp": 10, "accuracy": 90, "damage_class": "physical", "type": "steel", "typeURL": "https://pokeapi.co/api/v2/type/9/", "stat_changes": [{"change": 1, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}], "priority": 0, "effect_chance": 20, "effect": "Inflicts regular damage. Has a 20% chance to raise the user\'s Attack one stage."}, "moveSlot_2": {"name": "zen-headbutt", "power": 80, "pp": 15, "accuracy": 90, "damage_class": "physical", "type": "psychic", "typeURL": "https://pokeapi.co/api/v2/type/14/", "stat_changes": [], "priority": 0, "effect_chance": 20, "effect": "Inflicts regular damage.  Has a 20% chance to make the target flinch."}, "moveSlot_3": {"name": "giga-impact", "power": 150, "pp": 5, "accuracy": 90, "damage_class": "physical", "type": "normal", "typeURL": "https://pokeapi.co/api/v2/type/1/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  User loses its next turn to recharge, and cannot attack or switch out during that turnnull."}, "moveSlot_4": {"name": "rock-slide", "power": 75, "pp": 10, "accuracy": 90, "damage_class": "physical", "type": "rock", "typeURL": "https://pokeapi.co/api/v2/type/6/", "stat_changes": [], "priority": 0, "effect_chance": 30, "effect": "Inflicts regular damage.  Has a 30% chance to make the target flinch."}}',
+        slot_5='{"pokemon": "sylveon", "pokemonType": [{"slot": 1, "type": {"name": "fairy", "url": "https://pokeapi.co/api/v2/type/18/"}}], "pokemonStats": [{"base_stat": 95, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 65, "effort": 0, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 65, "effort": 0, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 110, "effort": 0, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 130, "effort": 2, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 60, "effort": 0, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "hyper-beam", "power": 150, "pp": 5, "accuracy": 90, "damage_class": "special", "type": "normal", "typeURL": "https://pokeapi.co/api/v2/type/1/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  User loses its next turn to recharge, and cannot attack or switch out during that turnnull."}, "moveSlot_2": {"name": "moonblast", "power": 95, "pp": 15, "accuracy": 100, "damage_class": "special", "type": "fairy", "typeURL": "https://pokeapi.co/api/v2/type/18/", "stat_changes": [{"change": -1, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}], "priority": 0, "effect_chance": 30, "effect": "Inflicts regular damage.  Has a 30% chance to lower the target\'s Special Attack by one stage."}, "moveSlot_3": {"name": "psyshock", "power": 80, "pp": 10, "accuracy": 100, "damage_class": "special", "type": "psychic", "typeURL": "https://pokeapi.co/api/v2/type/14/", "stat_changes": [], "priority": 0, "effect_chance": null, "effect": "Inflicts regular damage.  Damage calculation always uses the target\'s Defense, regardless of this move\'s damage classnull."}, "moveSlot_4": {"name": "shadow-ball", "power": 80, "pp": 15, "accuracy": 100, "damage_class": "special", "type": "ghost", "typeURL": "https://pokeapi.co/api/v2/type/8/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 20, "effect": "Inflicts regular damage.  Has a 20% chance to lower the target\'s Special Defense by one stage."}}',
+        slot_6='{"pokemon": "mewtwo", "pokemonType": [{"slot": 1, "type": {"name": "psychic", "url": "https://pokeapi.co/api/v2/type/14/"}}], "pokemonStats": [{"base_stat": 106, "effort": 0, "stat": {"name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/"}}, {"base_stat": 110, "effort": 0, "stat": {"name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/"}}, {"base_stat": 90, "effort": 0, "stat": {"name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/"}}, {"base_stat": 154, "effort": 3, "stat": {"name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/"}}, {"base_stat": 90, "effort": 0, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}, {"base_stat": 130, "effort": 0, "stat": {"name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/"}}], "moveSlot_1": {"name": "fire-blast", "power": 110, "pp": 5, "accuracy": 85, "damage_class": "special", "type": "fire", "typeURL": "https://pokeapi.co/api/v2/type/10/", "stat_changes": [], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  Has a 10% chance to burn the target."}, "moveSlot_2": {"name": "shadow-ball", "power": 80, "pp": 15, "accuracy": 100, "damage_class": "special", "type": "ghost", "typeURL": "https://pokeapi.co/api/v2/type/8/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 20, "effect": "Inflicts regular damage.  Has a 20% chance to lower the target\'s Special Defense by one stage."}, "moveSlot_3": {"name": "psychic", "power": 90, "pp": 10, "accuracy": 100, "damage_class": "special", "type": "psychic", "typeURL": "https://pokeapi.co/api/v2/type/14/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  Has a 10% chance to lower the target\'s Special Defense by one stage."}, "moveSlot_4": {"name": "focus-blast", "power": 120, "pp": 5, "accuracy": 70, "damage_class": "special", "type": "fighting", "typeURL": "https://pokeapi.co/api/v2/type/2/", "stat_changes": [{"change": -1, "stat": {"name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/"}}], "priority": 0, "effect_chance": 10, "effect": "Inflicts regular damage.  Has a 10% chance to lower the target\'s Special Defense by one stage."}}',
         trainerClass="Pokemon Champion",
         bio='A man who travelled from a different universe and took on the Pokemon Challenge.  He conquered the Gym Leaders and Elite Four like it was nothing.  He is the Pokemon Champion and will likely be the champion for a long time until he finds his way back to his universe.',
         pre_battle_quote='Hello there...my name is Rocky.  I was working late one night on a project...then a wormhole appeared and sucked me in.  Next thing I know, I woke up in Pallet Town and met Professor Oak.  Long story short, I conquered every obstacle I faced and became the ultimate champion.  Now, challenger, come face me!',
         post_battle_quote='Congratulations...you are the first person ever to have defeat me.  You are now the new and undisputed Pokemon Champion!',
     )
 
+
     db.session.add(demouser)
+    db.session.add(demouserallgymleader)
+    db.session.add(demouserallelitefour)
+    db.session.add(demouserchampion)
     db.session.add(brock)
     db.session.add(misty)
     db.session.add(ltsurge)
@@ -230,6 +288,7 @@ with app.app_context():
     db.session.add(bruno)
     db.session.add(agatha)
     db.session.add(lance)
+    db.session.add(rocky)
     
 
 
