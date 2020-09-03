@@ -90,6 +90,10 @@ def edit_pokemon_user_info(userId, pokemonSlot):
         finStr = finStr.replace('e"s', "e's")
     if '"recharge"' in finStr:
         finStr = finStr.replace('"recharge"', "recharge")
+    if 'True' in finStr:
+        finStr = finStr.replace('True', 'true')
+    if 'False' in finStr:
+        finStr = finStr.replace('False', 'false')
 
 
     if pokemonSlot == 'slot_1':
