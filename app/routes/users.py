@@ -175,3 +175,52 @@ def edit_pokemon_user_badge(userId):
     db.session.commit()
 
     return { 'user': user.as_dict()}
+
+@bp.route('<int:userId>/badges/<string:badge>', methods=['GET'])
+def getUserBadgeInfo(userId, badge):
+    user = User.query.filter_by(id=userId).first().as_dict()
+    userBadgeInfo = {}
+    
+    if badge == 'boulderbadge':
+        userBadgeInfo['trainer'] = 'brock'
+        userBadgeInfo['date'] = user['dateObtainBoulderBadge']
+        userBadgeInfo['team'] = user['teamObtainBoulderBadge']
+
+    if badge == 'cascadebadge':
+        userBadgeInfo['trainer'] = 'misty'
+        userBadgeInfo['date'] = user['dateObtainCascadeBadge']
+        userBadgeInfo['team'] = user['teamObtainCascadeBadge']
+    
+    if badge == 'thunderbadge':
+        userBadgeInfo['trainer'] = 'ltsurge'
+        userBadgeInfo['date'] = user['dateObtainThunderBadge']
+        userBadgeInfo['team'] = user['teamObtainThunderBadge']
+    
+    if badge == 'rainbowbadge':
+        userBadgeInfo['trainer'] = 'erika'
+        userBadgeInfo['date'] = user['dateObtainRainbowBadge']
+        userBadgeInfo['team'] = user['teamObtainRainbowBadge']
+    
+    if badge == 'soulbadge':
+        userBadgeInfo['trainer'] = 'koga'
+        userBadgeInfo['date'] = user['dateObtainSoulBadge']
+        userBadgeInfo['team'] = user['teamObtainSoulBadge']
+    
+    if badge == 'marshbadge':
+        userBadgeInfo['trainer'] = 'sabrina'
+        userBadgeInfo['date'] = user['dateObtainMarshBadge']
+        userBadgeInfo['team'] = user['teamObtainMarshBadge']
+    
+    if badge == 'volcanobadge':
+        userBadgeInfo['trainer'] = 'blaine'
+        userBadgeInfo['date'] = user['dateObtainVolcanoBadge']
+        userBadgeInfo['team'] = user['teamObtainVolcanoBadge']
+    
+    if badge == 'earthbadge':
+        userBadgeInfo['trainer'] = 'giovanni'
+        userBadgeInfo['date'] = user['dateObtainEarthBadge']
+        userBadgeInfo['team'] = user['teamObtainEarthBadge']
+
+    return { 'trainer': userBadgeInfo['trainer'], 'date': userBadgeInfo['date'], 'team': userBadgeInfo['team'] }
+
+    
