@@ -45,6 +45,22 @@ class User(MixinAsDict, db.Model):
     beatElite4_3 = db.Column(db.Boolean, nullable=False)
     beatElite4_4 = db.Column(db.Boolean, nullable=False)
     beatChampion = db.Column(db.Boolean, nullable=False)
+    dateObtainBoulderBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainBoulderBadge = db.Column(db.String(), nullable=True)
+    dateObtainCascadeBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainCascadeBadge = db.Column(db.String(), nullable=True)
+    dateObtainThunderBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainThunderBadge = db.Column(db.String(), nullable=True)
+    dateObtainRainbowBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainRainbowBadge = db.Column(db.String(), nullable=True)
+    dateObtainSoulBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainSoulBadge = db.Column(db.String(), nullable=True)
+    dateObtainMarshBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainMarshBadge = db.Column(db.String(), nullable=True)
+    dateObtainVolcanoBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainVolcanoBadge = db.Column(db.String(), nullable=True)
+    dateObtainEarthBadge = db.Column(db.DateTime, nullable=True)
+    teamObtainEarthBadge = db.Column(db.String(), nullable=True)
 
     @property
     def password(self):

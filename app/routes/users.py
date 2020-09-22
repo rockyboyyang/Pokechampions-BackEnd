@@ -3,7 +3,7 @@ import jwt
 import json
 from flask_cors import cross_origin
 from werkzeug.security import generate_password_hash
-
+from datetime import datetime
 from app.models import db, User
 from flask import Response
 
@@ -118,31 +118,58 @@ def edit_pokemon_user_info(userId, pokemonSlot):
 @bp.route('<int:userId>/badges', methods=['PUT'])
 def edit_pokemon_user_badge(userId):
     data = request.json
+
     user = User.query.filter_by(id=userId).first()
-    if data == 'brock':
+    if data['opponent'] == 'brock':
+        if user.boulderbadge: return
+        user.dateObtainBoulderBadge = datetime.now()
+        user.teamObtainBoulderBadge = str(data['team'])
         user.boulderbadge = True
-    if data == 'misty':
+    if data['opponent'] == 'misty':
+        if user.cascadebadge: return
+        user.dateObtainCascadeBadge = datetime.now()
+        user.teamObtainCascadeBadge = str(data['team'])
         user.cascadebadge = True
-    if data == 'ltsurge':
+    if data['opponent'] == 'ltsurge':
+        if user.thunderbadge: return
+        user.dateObtainThunderBadge = datetime.now()
+        user.teamObtainThunderBadge = str(data['team'])
         user.thunderbadge = True
-    if data == 'erika':
+    if data['opponent'] == 'erika':
+        if user.rainbowbadge: return
+        user.dateObtainRainbowadge = datetime.now()
+        user.teamObtainRainbowBadge = str(data['team'])
         user.rainbowbadge = True
-    if data == 'koga':
+    if data['opponent'] == 'koga':
+        if user.soulbadge: return
+        user.dateObtainSoulBadge = datetime.now()
+        user.teamObtainSoulBadge = str(data['team'])
         user.soulbadge = True
-    if data == 'sabrina':
+    if data['opponent'] == 'sabrina':
+        if user.marshbadge: return
+        user.dateObtainMarshBadge = datetime.now()
+        user.teamObtainMarshBadge = str(data['team'])
         user.marshbadge = True
-    if data == 'blaine':
+    if data['opponent'] == 'blaine':
+        if user.volcanobadge: return
+        user.dateObtainVolcanoBadge = datetime.now()
+        user.teamObtainVolcanoBadge = str(data['team'])
         user.volcanobadge = True
-    if data == 'giovanni':
+    if data['opponent'] == 'giovanni':
+        if user.earthbadge: return
+        user.dateObtainEarthBadge = datetime.now()
+        user.teamObtainEarthBadge = str(data['team'])
         user.earthbadge = True
-    if data == 'lorelei':
+    if data['opponent'] == 'lorelei':
         user.beatElite4_1 = True
-    if data == 'bruno':
+    if data['opponent'] == 'bruno':
         user.beatElite4_2 = True
-    if data == 'agatha':
+    if data['opponent'] == 'agatha':
         user.beatElite4_3 = True
-    if data == 'lance':
+    if data['opponent'] == 'lance':
         user.beatElite4_4 = True
+    if data['opponent'] == 'rocky':
+        user.beatChampion = True
 
 
     db.session.commit()
