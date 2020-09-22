@@ -221,6 +221,17 @@ def getUserBadgeInfo(userId, badge):
         userBadgeInfo['date'] = user['dateObtainEarthBadge']
         userBadgeInfo['team'] = user['teamObtainEarthBadge']
 
+    userBadgeInfo['team'] = userBadgeInfo['team'].replace("'", '"')
+
+    if "False" in userBadgeInfo['team']:
+        userBadgeInfo['team'] = userBadgeInfo['team'].replace("False", "false")
+
+    if "True" in userBadgeInfo['team']:
+        userBadgeInfo['team'] = userBadgeInfo['team'].replace("True", "true")
+
+    if "None" in userBadgeInfo['team']:
+        userBadgeInfo['team'] = userBadgeInfo['team'].replace("None", "null")
+
     return { 'trainer': userBadgeInfo['trainer'], 'date': userBadgeInfo['date'], 'team': userBadgeInfo['team'] }
 
     
