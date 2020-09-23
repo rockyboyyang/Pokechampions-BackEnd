@@ -33,47 +33,29 @@ with app.app_context():
                     beatElite4_3=False,
                     beatElite4_4=False,
                     beatChampion=False,
+                    dateObtainBoulderBadge=None,
+                    dateObtainCascadeBadge=None,
+                    dateObtainThunderBadge=None,
+                    dateObtainRainbowBadge=None,
+                    dateObtainSoulBadge=None,
+                    dateObtainMarshBadge=None,
+                    dateObtainVolcanoBadge=None,
+                    dateObtainEarthBadge=None,
+                    teamObtainBoulderBadge=None,
+                    teamObtainCascadeBadge=None,
+                    teamObtainThunderBadge=None,
+                    teamObtainRainbowBadge=None,
+                    teamObtainSoulBadge=None,
+                    teamObtainMarshBadge=None,
+                    teamObtainVolcanoBadge=None,
+                    teamObtainEarthBadge=None,
                     )
 
-    demouserallgymleader = User(username='demouserallgymleader', 
-                    hashed_password=generate_password_hash('password'), 
-                    rank='Novice',
-                    boulderbadge=True,
-                    cascadebadge=True,
-                    thunderbadge=True,
-                    rainbowbadge=True,
-                    soulbadge=True,
-                    marshbadge=True,
-                    volcanobadge=True,
-                    earthbadge=True,
-                    beatElite4_1=False,
-                    beatElite4_2=False,
-                    beatElite4_3=False,
-                    beatElite4_4=False,
-                    beatChampion=False,
-                    )
     
-    demouserallelitefour = User(username='demouserallelitefour', 
-                    hashed_password=generate_password_hash('password'), 
-                    rank='Novice',
-                    boulderbadge=True,
-                    cascadebadge=True,
-                    thunderbadge=True,
-                    rainbowbadge=True,
-                    soulbadge=True,
-                    marshbadge=True,
-                    volcanobadge=True,
-                    earthbadge=True,
-                    beatElite4_1=True,
-                    beatElite4_2=True,
-                    beatElite4_3=True,
-                    beatElite4_4=True,
-                    beatChampion=False,
-                    )
     
     demouserchampion = User(username='demouserchampion', 
                     hashed_password=generate_password_hash('password'), 
-                    rank='Novice',
+                    rank='Champion',
                     boulderbadge=True,
                     cascadebadge=True,
                     thunderbadge=True,
@@ -87,6 +69,22 @@ with app.app_context():
                     beatElite4_3=True,
                     beatElite4_4=True,
                     beatChampion=True,
+                    dateObtainBoulderBadge='2020-09-22 15:57:39.445236',
+                    dateObtainCascadeBadge='2020-09-22 15:57:39.445236',
+                    dateObtainThunderBadge='2020-09-22 15:57:39.445236',
+                    dateObtainRainbowBadge='2020-09-22 15:57:39.445236',
+                    dateObtainSoulBadge='2020-09-22 15:57:39.445236',
+                    dateObtainMarshBadge='2020-09-22 15:57:39.445236',
+                    dateObtainVolcanoBadge='2020-09-22 15:57:39.445236',
+                    dateObtainEarthBadge='2020-09-22 15:57:39.445236',
+                    teamObtainBoulderBadge="[{'name': 'exeggutor', 'isShiny': False}, {'name': 'nidoking', 'isShiny': False}, {'name': 'butterfree', 'isShiny': False}, {'name': 'venusaur', 'isShiny': False}, None, {'name': 'marowak-alola', 'isShiny': False}]",
+                    teamObtainCascadeBadge="[{'name': 'electrode', 'isShiny': False}, {'name': 'celebi', 'isShiny': False}, {'name': 'raichu-alola', 'isShiny': False}, {'name': 'magneton', 'isShiny': False}, None, {'name': 'marowak-alola', 'isShiny': False}]",
+                    teamObtainThunderBadge="[{'name': 'gabite', 'isShiny': False}, {'name': 'dewgong', 'isShiny': False}, {'name': 'manectric', 'isShiny': False}, {'name': 'electabuzz', 'isShiny': False}, None, {'name': 'hitmontop', 'isShiny': False}]",
+                    teamObtainRainbowBadge="[{'name': 'magmar', 'isShiny': False}, {'name': 'scizor', 'isShiny': False}, {'name': 'staravia', 'isShiny': False}, {'name': 'magnezone', 'isShiny': False}, None, {'name': 'muk-alola', 'isShiny': False}]",
+                    teamObtainSoulBadge="[{'name': 'magikarp', 'isShiny': False}, {'name': 'blaziken', 'isShiny': False}, {'name': 'rhydon', 'isShiny': False}, {'name': 'clefable', 'isShiny': False}, None, {'name': 'hypno', 'isShiny': False}]",
+                    teamObtainMarshBadge="[{'name': 'seadra', 'isShiny': False}, {'name': 'scyther', 'isShiny': False}, {'name': 'umbreon', 'isShiny': False}, {'name': 'houndoom', 'isShiny': False}, None, {'name': 'abra', 'isShiny': False}]",
+                    teamObtainVolcanoBadge="[{'name': 'porygon', 'isShiny': False}, {'name': 'swampert', 'isShiny': False}, {'name': 'quagsire', 'isShiny': False}, {'name': 'tropius', 'isShiny': False}, None, {'name': 'whiscash', 'isShiny': False}]",
+                    teamObtainEarthBadge="[{'name': 'primarina', 'isShiny': False}, {'name': 'froslass', 'isShiny': False}, {'name': 'politoed', 'isShiny': False}, {'name': 'skarmory', 'isShiny': False}, None, {'name': 'azumarill', 'isShiny': False}]",
                     )
     
     brock = Trainer(
@@ -273,8 +271,6 @@ with app.app_context():
 
 
     db.session.add(demouser)
-    db.session.add(demouserallgymleader)
-    db.session.add(demouserallelitefour)
     db.session.add(demouserchampion)
     db.session.add(brock)
     db.session.add(misty)
